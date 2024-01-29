@@ -19,3 +19,25 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'products'
+    label: 'Products'
+    folder: 'content/store'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Object
+        name: object
+        widget: object
+        fields:
+          - label: Title
+            name: title
+            widget: string
+      - label: body
+        name: body
+        widget: markdown
